@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { BubbleProps } from 'flowise-embed'
+import type { BubbleProps } from '@exdatic/flowise-embed'
 
 type Props = BubbleProps
 
@@ -22,7 +22,7 @@ export const BubbleChat = (props: Props) => {
 
   useEffect(() => {
     ;(async () => {
-      await import('flowise-embed/dist/web')
+      await import('@exdatic/flowise-embed/dist/web')
       setIsInitialized(true)
     })()
     return () => {
